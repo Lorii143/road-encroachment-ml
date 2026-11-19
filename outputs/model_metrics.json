@@ -1,0 +1,63 @@
+{
+  "dataset_rows": 1700,
+  "train_rows": 1360,
+  "test_rows": 340,
+  "class_distribution": {
+    "High": 721,
+    "Medium": 401,
+    "Critical": 395,
+    "Low": 183
+  },
+  "accuracy": 0.9823529411764705,
+  "weighted_f1": 0.9824024099405523,
+  "macro_f1": 0.980563623671711,
+  "best_parameters": {
+    "classifier__C": 100,
+    "classifier__gamma": 0.01
+  },
+  "best_cv_weighted_f1": 0.9758173003039097,
+  "confusion_matrix_labels": [
+    "Low",
+    "Medium",
+    "High",
+    "Critical"
+  ],
+  "confusion_matrix": [
+    [
+      37,
+      0,
+      0,
+      0
+    ],
+    [
+      2,
+      78,
+      0,
+      0
+    ],
+    [
+      0,
+      3,
+      140,
+      1
+    ],
+    [
+      0,
+      0,
+      0,
+      79
+    ]
+  ],
+  "feature_columns": [
+    "distance_to_road",
+    "encroachment_depth",
+    "encroachment_area",
+    "building_area",
+    "encroachment_percentage",
+    "latitude",
+    "longitude",
+    "building_type"
+  ],
+  "target": "severity",
+  "interpretation": "Severity labels are deterministically derived from encroachment depth. This classifier reproduces the measured-severity classification and must not be described as forecasting future encroachment."
+}
